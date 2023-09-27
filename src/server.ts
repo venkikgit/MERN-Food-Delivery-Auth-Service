@@ -1,8 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function login(username: string): boolean {
-    // eslint-disable-next-line no-console
+function login(username: string): string {
     console.log("Logged in Successfully");
-    return true;
+    const user = {
+        name: "venki",
+    };
+    const name = user.name;
+    return name;
 }
 
 login("venki");
