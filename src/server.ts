@@ -1,10 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function login(username: string): string {
-    // console.log("Logged in Successfully");
+    // console.log(username);
     const user = {
         name: 'venki',
     };
-    const name = user.name;
+    const name = user['name'];
     return name;
 }
 
