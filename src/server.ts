@@ -1,11 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function login(username: string): string {
-    // console.log(username);
-    const user = {
-        name: 'venki',
-    };
-    const name = user['name'];
-    return name;
-}
+// import { Config } from './config';
 
-login('venki');
+// console.log('PORT', Config.PORT);
+// console.log('PORT', Config.NODE_ENV);
