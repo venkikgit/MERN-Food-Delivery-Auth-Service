@@ -2,10 +2,10 @@
 function login(username: string): string {
     // console.log("Logged in Successfully");
     const user = {
-        name: "venki",
+        name: 'venki',
     };
     const name = user.name;
     return name;
 }
 
-login("venki");
+login('venki');
