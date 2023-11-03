@@ -5,4 +5,5 @@
 
 # npm run format:fix
 
-npx lint-stagednpm run lint
+npx lint-staged
+npm run lint
