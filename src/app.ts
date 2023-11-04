@@ -8,7 +8,7 @@ const app = express();
 app.get('/', async (req, res) => {
     // const err = createHttpError(401, 'You are not allowed to this page');
     // return next(err);
-    return res.send('Welcome');
+    return res.status(201).send('Welcome');
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
