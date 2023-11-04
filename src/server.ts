@@ -1,17 +1,20 @@
-// import { Config } from './config';
+import app from './app';
+import { Config } from './config';
+import { logger } from './config/logger';
 
-// console.log('PORT', Config.PORT);
-// console.log('PORT', Config.NODE_ENV);
-
-// console.log("Server is running");
-
-function login() {
-    const user = {
-        name: 'venki',
-        id: '1',
-    };
-
-    const fullName = user.name;
-    return user.name + fullName;
-}
-login();
+const startServer = function () {
+    try {
+        app.listen(Config.PORT, () => {
+            // eslint-disable-next-line no-console
+            logger.debug('Hello');
+            logger.info(`Listening on PORT ${Config.PORT}`, { test: '1' });
+        });
+    } catch (err) {
+        // eslint-disable-next-line no-console
+        if (err instanceof Error) {
+            logger.error(err.message);
+            process.exit(1);
+        }
+    }
+};
+startServer();
