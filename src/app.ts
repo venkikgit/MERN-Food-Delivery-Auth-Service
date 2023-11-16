@@ -1,7 +1,8 @@
+import 'reflect-metadata';
 import express, { NextFunction, Request, Response } from 'express';
 import { logger } from './config/logger';
 import { HttpError } from 'http-errors';
-
+import authRouter from './routes/auth';
 const app = express();
 
 // eslint-disable-next-line @typescript-eslint/no-misused-promises, @typescript-eslint/require-await
@@ -11,6 +12,7 @@ app.get('/', async (req, res) => {
     return res.status(201).send('Welcome to Auth Service');
 });
 
+app.use('/auth', authRouter);
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 app.use((err: HttpError, req: Request, res: Response, next: NextFunction) => {
     logger.error(err.message);
